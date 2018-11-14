@@ -80,13 +80,81 @@
                                 <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="a42-Nu-q9s">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoalCell" id="a42-Nu-q9s" customClass="GoalCell" customModule="Goals_Monitor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a42-Nu-q9s" id="lhn-NZ-9Q2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRm-Od-nGP">
+                                                    <rect key="frame" x="10" y="2" width="43" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="I4a-Yq-4gW"/>
+                                                        <constraint firstAttribute="width" constant="43" id="NJW-5x-pxS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9q-2f-rem">
+                                                    <rect key="frame" x="10" y="23.5" width="38" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="38" id="T2V-7W-GT4"/>
+                                                        <constraint firstAttribute="height" constant="18" id="rLU-ZC-hFy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink tea three times a day." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="VmR-iV-Utr">
+                                                    <rect key="frame" x="60" y="2" width="252" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb3-k4-8Lg">
+                                                    <rect key="frame" x="60" y="23.5" width="80" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="aHH-jA-ZeS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="f5L-Fk-ksU">
+                                                    <rect key="frame" x="322" y="0.0" width="43" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="WbZ-xM-aSI"/>
+                                                        <constraint firstAttribute="width" constant="43" id="ZSK-9K-boD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f5L-Fk-ksU" firstAttribute="top" secondItem="lhn-NZ-9Q2" secondAttribute="top" id="0kN-rg-XLL"/>
+                                                <constraint firstItem="VmR-iV-Utr" firstAttribute="leading" secondItem="CRm-Od-nGP" secondAttribute="trailing" constant="7" id="79w-Q2-ilk"/>
+                                                <constraint firstItem="CRm-Od-nGP" firstAttribute="leading" secondItem="lhn-NZ-9Q2" secondAttribute="leading" constant="10" id="AvB-jY-wV3"/>
+                                                <constraint firstItem="f5L-Fk-ksU" firstAttribute="leading" secondItem="VmR-iV-Utr" secondAttribute="trailing" constant="10" id="IRh-vq-Jis"/>
+                                                <constraint firstAttribute="bottom" secondItem="Pb3-k4-8Lg" secondAttribute="bottom" constant="2" id="KaY-zj-vzt"/>
+                                                <constraint firstItem="Pb3-k4-8Lg" firstAttribute="centerY" secondItem="A9q-2f-rem" secondAttribute="centerY" id="PPD-Nr-YMF"/>
+                                                <constraint firstItem="A9q-2f-rem" firstAttribute="leading" secondItem="lhn-NZ-9Q2" secondAttribute="leading" constant="10" id="R0m-ry-Duh"/>
+                                                <constraint firstAttribute="bottom" secondItem="f5L-Fk-ksU" secondAttribute="bottom" id="Urt-ld-Sd8"/>
+                                                <constraint firstAttribute="trailing" secondItem="f5L-Fk-ksU" secondAttribute="trailing" constant="10" id="Z2I-Kk-jH6"/>
+                                                <constraint firstItem="VmR-iV-Utr" firstAttribute="top" secondItem="lhn-NZ-9Q2" secondAttribute="top" constant="2" id="ZDK-JN-L0Z"/>
+                                                <constraint firstItem="CRm-Od-nGP" firstAttribute="top" secondItem="lhn-NZ-9Q2" secondAttribute="top" constant="2" id="ZF2-dK-xi4"/>
+                                                <constraint firstItem="VmR-iV-Utr" firstAttribute="centerY" secondItem="CRm-Od-nGP" secondAttribute="centerY" id="egi-Ri-sRb"/>
+                                                <constraint firstAttribute="bottom" secondItem="A9q-2f-rem" secondAttribute="bottom" constant="2" id="h2X-F4-mvK"/>
+                                                <constraint firstItem="Pb3-k4-8Lg" firstAttribute="leading" secondItem="A9q-2f-rem" secondAttribute="trailing" constant="12" id="z49-Of-Ip8"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="goalDescriptionLbl" destination="VmR-iV-Utr" id="T2J-NL-hZf"/>
+                                            <outlet property="goalProgressLbl" destination="f5L-Fk-ksU" id="9nM-ey-pKt"/>
+                                            <outlet property="goalTypeLbl" destination="Pb3-k4-8Lg" id="QIc-F0-ZDT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
