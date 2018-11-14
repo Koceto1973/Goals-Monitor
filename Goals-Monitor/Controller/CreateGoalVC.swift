@@ -33,7 +33,7 @@ class CreateGoalVC: UIViewController {
     }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

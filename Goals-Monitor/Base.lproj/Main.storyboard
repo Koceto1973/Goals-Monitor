@@ -13,7 +13,7 @@
         <!--GoalsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GoalsVC" customModule="Goals_Monitor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goalsVC" id="BYZ-38-t0r" customClass="GoalsVC" customModule="Goals_Monitor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,8 +46,7 @@
                                         </constraints>
                                         <state key="normal" image="addGoal"/>
                                         <connections>
-                                            <action selector="createGoalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5B-N9-Zr9"/>
-                                            <segue destination="IbK-o5-4C8" kind="presentation" id="4Gj-Wi-FGn"/>
+                                            <action selector="createGoalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6f3-m2-ZVk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -186,7 +185,7 @@
         <!--Create GoalVC-->
         <scene sceneID="xGI-7T-MXH">
             <objects>
-                <viewController id="IbK-o5-4C8" customClass="CreateGoalVC" customModule="Goals_Monitor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createGoalVC" id="IbK-o5-4C8" customClass="CreateGoalVC" customModule="Goals_Monitor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="THp-A1-bZA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
