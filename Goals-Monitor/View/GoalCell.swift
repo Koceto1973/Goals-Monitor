@@ -10,6 +10,12 @@ import UIKit
 
 class GoalCell: UITableViewCell {
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+    }
+    
     @IBOutlet weak var goalDescriptionLbl: UILabel!
     @IBOutlet weak var goalTypeLbl: UILabel!
     @IBOutlet weak var goalProgressLbl: UILabel!
