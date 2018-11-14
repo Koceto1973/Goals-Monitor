@@ -14,6 +14,8 @@
 		354D7493219BAF1200CBE7C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 354D7492219BAF1200CBE7C8 /* Assets.xcassets */; };
 		354D7496219BAF1200CBE7C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354D7494219BAF1200CBE7C8 /* LaunchScreen.storyboard */; };
 		354D74A2219BCCFB00CBE7C8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D74A1219BCCFB00CBE7C8 /* GoalCell.swift */; };
+		354D74A4219BF44200CBE7C8 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D74A3219BF44200CBE7C8 /* GoalType.swift */; };
+		354D74A6219BFEC800CBE7C8 /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D74A5219BFEC800CBE7C8 /* CreateGoalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		354D7495219BAF1200CBE7C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		354D7497219BAF1200CBE7C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		354D74A1219BCCFB00CBE7C8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		354D74A3219BF44200CBE7C8 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		354D74A5219BFEC800CBE7C8 /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		354D749D219BB20C00CBE7C8 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				354D74A3219BF44200CBE7C8 /* GoalType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				354D748A219BAF0E00CBE7C8 /* GoalsVC.swift */,
+				354D74A5219BFEC800CBE7C8 /* CreateGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354D74A4219BF44200CBE7C8 /* GoalType.swift in Sources */,
+				354D74A6219BFEC800CBE7C8 /* CreateGoalVC.swift in Sources */,
 				354D74A2219BCCFB00CBE7C8 /* GoalCell.swift in Sources */,
 				354D7491219BAF0E00CBE7C8 /* Goals_Monitor.xcdatamodeld in Sources */,
 				354D748B219BAF0E00CBE7C8 /* GoalsVC.swift in Sources */,

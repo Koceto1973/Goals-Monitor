@@ -21,7 +21,7 @@ class GoalsVC: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.isHidden = false
+        //self.tableView.isHidden = false
     }
 
     @IBAction func createGoalButtonPressed(_ sender: Any) {
@@ -34,13 +34,13 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 // goals.count
+        return goals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "goalCell") as? GoalCell else { return UITableViewCell() }
-//        let goal = goals[indexPath.row]
-//        cell.configureCell(goal: goal)
+          let goal = goals[indexPath.row]
+          cell.configureCell(goal: goal)
         return cell
     }
     
