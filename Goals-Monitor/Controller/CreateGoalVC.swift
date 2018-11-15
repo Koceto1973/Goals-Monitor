@@ -40,18 +40,22 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
         goalType = .longTerm
     }
     
-    
     @IBAction func nextBtnWasPressed(_ sender: Any) {
+        // text view has no placeholder
+        if goalTextView.text != "" && goalTextView.text != "What is your goal?" {
+            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "finishGoalVC") as? FinishGoalVC else { return }
+            finishGoalVC.initData(description: goalTextView.text!, type: goalType)
+            presentingViewController?.presentSecondaryDetail(finishGoalVC)
+        }
+    }
+    
+    // empty the text  view when going in
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        goalTextView.text = ""
     }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismissDetail()
-    }
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     
     // keyboard dismissal
