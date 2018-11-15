@@ -20,6 +20,8 @@ extension UIViewController {
         present(viewControllerToPresent, animated: false, completion: nil)
     }
     
+    // to jump over the GreateGoalVC during FinishGoalVC dismisal
+    // and get back to GoalsVC
     func presentSecondaryDetail(_ viewControllerToPresent: UIViewController) {
         let transition = CATransition()
         transition.duration = 0.3
@@ -27,9 +29,9 @@ extension UIViewController {
         transition.subtype = kCATransitionFromRight // check other options also
         
         guard let presentedViewController = presentedViewController else { return }
-        // true is the default transition
         presentedViewController.dismiss(animated: false) {
             self.view.window?.layer.add(transition, forKey: kCATransition)
+            // true is the default transition
             self.present(viewControllerToPresent, animated: false, completion: nil)
         }
     }

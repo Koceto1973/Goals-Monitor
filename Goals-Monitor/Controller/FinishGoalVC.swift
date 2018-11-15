@@ -31,28 +31,29 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
     }
     
     func save(completion: (_ finished: Bool) -> ()) {
-//        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-//        let goal = Goal(context: managedContext)
-//
-//        goal.goalDescription = goalDescription
-//        goal.goalType = goalType.rawValue
-//        goal.goalCompletionValue = Int32(pointsTextField.text!)!
-//        goal.goalProgress = Int32(0)
-//
-//        do {
-//            try managedContext.save()
-//            print("Successfully saved data.")
-//            completion(true)
-//        } catch {
-//            debugPrint("Could not save: \(error.localizedDescription)")
-//            completion(false)
-//        }
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        let goal = Goal(context: managedContext)
+        
+        goal.describedAs = goalDescription
+        goal.typeAs = goalType.rawValue
+        goal.completionOf = Int32(pointsTextField.text!)!
+        goal.progressOf = Int32(0)
+        
+        do {
+            try managedContext.save()
+            print("Successfully saved data.")
+            completion(true)
+        } catch {
+            debugPrint("Could not save: \(error.localizedDescription)")
+            completion(false)
+        }
     }
         
     @IBAction func createGoalBtnWasPressed(_ sender: Any) {
-        if pointsTextField.text != "" {
+        if pointsTextField.text != ""  && pointsTextField.text != "0" {
             self.save { (complete) in
                 if complete {
+                    // standard dismissal
                     dismiss(animated: true, completion: nil)
                 }
             }
@@ -68,3 +69,4 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }    
 }
+
