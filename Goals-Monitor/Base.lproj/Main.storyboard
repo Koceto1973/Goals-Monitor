@@ -60,25 +60,29 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JAS-nn-FfX">
-                                <rect key="frame" x="86.5" y="210" width="202" height="43"/>
+                                <rect key="frame" x="87" y="210" width="202" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to GoalMonitor!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-MV-rSN">
-                                        <rect key="frame" x="0.0" y="0.0" width="202" height="23.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome to GoalMonitor!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-MV-rSN">
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="25.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a goal to start!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuk-RX-PAi">
-                                        <rect key="frame" x="22.5" y="23.5" width="157.5" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Create a goal to start!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuk-RX-PAi">
+                                        <rect key="frame" x="22.5" y="25.5" width="157.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RhL-om-VOZ"/>
+                                </constraints>
                             </stackView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-2N-TeX">
                                 <rect key="frame" x="0.0" y="90" width="375" height="577"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalCell" id="a42-Nu-q9s" customClass="GoalCell" customModule="Goals_Monitor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -132,16 +136,41 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DU5-7b-upq">
+                                                    <rect key="frame" x="0.0" y="-2" width="375" height="45.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Completed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSk-SB-st9">
+                                                            <rect key="frame" x="70" y="6" width="235" height="36"/>
+                                                            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="EXV-xt-koc"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="DSk-SB-st9" firstAttribute="leading" secondItem="DU5-7b-upq" secondAttribute="leading" constant="70" id="4ef-19-bUO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DSk-SB-st9" secondAttribute="trailing" constant="70" id="eFR-No-L4T"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="f5L-Fk-ksU" firstAttribute="top" secondItem="lhn-NZ-9Q2" secondAttribute="top" id="0kN-rg-XLL"/>
                                                 <constraint firstItem="VmR-iV-Utr" firstAttribute="leading" secondItem="CRm-Od-nGP" secondAttribute="trailing" constant="7" id="79w-Q2-ilk"/>
+                                                <constraint firstItem="DU5-7b-upq" firstAttribute="leading" secondItem="lhn-NZ-9Q2" secondAttribute="leading" id="88e-bn-eQN"/>
                                                 <constraint firstItem="CRm-Od-nGP" firstAttribute="leading" secondItem="lhn-NZ-9Q2" secondAttribute="leading" constant="10" id="AvB-jY-wV3"/>
                                                 <constraint firstItem="f5L-Fk-ksU" firstAttribute="leading" secondItem="VmR-iV-Utr" secondAttribute="trailing" constant="10" id="IRh-vq-Jis"/>
                                                 <constraint firstAttribute="bottom" secondItem="Pb3-k4-8Lg" secondAttribute="bottom" constant="2" id="KaY-zj-vzt"/>
+                                                <constraint firstItem="DU5-7b-upq" firstAttribute="top" secondItem="lhn-NZ-9Q2" secondAttribute="top" constant="-2" id="M4G-7D-Pgq"/>
                                                 <constraint firstItem="Pb3-k4-8Lg" firstAttribute="centerY" secondItem="A9q-2f-rem" secondAttribute="centerY" id="PPD-Nr-YMF"/>
                                                 <constraint firstItem="A9q-2f-rem" firstAttribute="leading" secondItem="lhn-NZ-9Q2" secondAttribute="leading" constant="10" id="R0m-ry-Duh"/>
+                                                <constraint firstAttribute="trailing" secondItem="DU5-7b-upq" secondAttribute="trailing" id="RCl-kg-7eJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="f5L-Fk-ksU" secondAttribute="bottom" id="Urt-ld-Sd8"/>
+                                                <constraint firstAttribute="bottom" secondItem="DU5-7b-upq" secondAttribute="bottom" id="XUA-9s-Qx9"/>
+                                                <constraint firstItem="DSk-SB-st9" firstAttribute="centerY" secondItem="lhn-NZ-9Q2" secondAttribute="centerY" id="Ywq-wP-1gv"/>
                                                 <constraint firstAttribute="trailing" secondItem="f5L-Fk-ksU" secondAttribute="trailing" constant="10" id="Z2I-Kk-jH6"/>
                                                 <constraint firstItem="VmR-iV-Utr" firstAttribute="top" secondItem="lhn-NZ-9Q2" secondAttribute="top" constant="2" id="ZDK-JN-L0Z"/>
                                                 <constraint firstItem="CRm-Od-nGP" firstAttribute="top" secondItem="lhn-NZ-9Q2" secondAttribute="top" constant="2" id="ZF2-dK-xi4"/>
@@ -150,8 +179,9 @@
                                                 <constraint firstItem="Pb3-k4-8Lg" firstAttribute="leading" secondItem="A9q-2f-rem" secondAttribute="trailing" constant="12" id="z49-Of-Ip8"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="completionView" destination="DU5-7b-upq" id="kZr-fD-kZN"/>
                                             <outlet property="goalDescriptionLbl" destination="VmR-iV-Utr" id="T2J-NL-hZf"/>
                                             <outlet property="goalProgressLbl" destination="f5L-Fk-ksU" id="9nM-ey-pKt"/>
                                             <outlet property="goalTypeLbl" destination="Pb3-k4-8Lg" id="QIc-F0-ZDT"/>
@@ -165,14 +195,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aC7-Ve-81M" secondAttribute="trailing" id="1ec-Tg-lYp"/>
                             <constraint firstItem="Boq-2N-TeX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3im-qg-fiX"/>
                             <constraint firstItem="Boq-2N-TeX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4TO-Qh-nbj"/>
+                            <constraint firstItem="Boq-2N-TeX" firstAttribute="top" secondItem="aC7-Ve-81M" secondAttribute="bottom" id="G0h-1R-lFx"/>
                             <constraint firstItem="Boq-2N-TeX" firstAttribute="top" secondItem="aC7-Ve-81M" secondAttribute="top" constant="70" id="Lph-Wk-eNu"/>
                             <constraint firstItem="aC7-Ve-81M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P8Y-Yr-fpU"/>
                             <constraint firstItem="JAS-nn-FfX" firstAttribute="top" secondItem="aC7-Ve-81M" secondAttribute="bottom" constant="120" id="gla-Bm-xsm"/>
                             <constraint firstItem="JAS-nn-FfX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hAT-M4-P5U"/>
+                            <constraint firstItem="Boq-2N-TeX" firstAttribute="top" secondItem="aC7-Ve-81M" secondAttribute="bottom" id="hS5-vj-ibL"/>
                             <constraint firstItem="aC7-Ve-81M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kip-hv-ATJ"/>
                             <constraint firstItem="Boq-2N-TeX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qnl-Cu-eBc"/>
+                            <constraint firstItem="JAS-nn-FfX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wfI-Sk-j3L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hAT-M4-P5U"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Boq-2N-TeX" id="icQ-qX-37i"/>
