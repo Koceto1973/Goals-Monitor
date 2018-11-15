@@ -52,6 +52,7 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     // empty the text  view when going in
     func textViewDidBeginEditing(_ textView: UITextView) {
         goalTextView.text = ""
+        goalTextView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
